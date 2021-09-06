@@ -13,7 +13,7 @@
   </div>
   </div>
    
-    <div  class="list-item"  *ngFor="let item of todo; let i = index;  trackBy: trackByFn"  >
+    <div  class="list-item"  *ngFor="let item of todo; let i = index;  "  >
     <button (click) = "checkItemTodo(todo, i)"
     mat-icon-button class = "button-close">
       <mat-checkbox></mat-checkbox>
@@ -38,7 +38,7 @@
       </div>
       </div>
      
-    <div class="list-item" *ngFor="let item of inprogress; let i = index;  trackBy: trackByFn" >
+    <div class="list-item" *ngFor="let item of inprogress; let i = index;  " >
      
     <button (click) = "checkItemInprogress(inprogress, i)"
     mat-icon-button class = "button-close">
@@ -68,7 +68,7 @@
   </div>
   </div>
 
-<div class="list-item" *ngFor="let item of completed; let i = index;  trackBy: trackByFn" >
+<div class="list-item" *ngFor="let item of completed; let i = index;  " >
 <button 
 mat-icon-button class = "button-close">
   <mat-checkbox></mat-checkbox>

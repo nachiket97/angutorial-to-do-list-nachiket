@@ -27,11 +27,11 @@ export class AppComponent  {
   }
 
   private checkItemTodo(item,i){
-    console.log(item,'42',i,'42',item[i])
+    // console.log(item,'42',i,'42',item[i])
     const removTodo = item[i];
-    console.log(removTodo,'44',)
+    // console.log(removTodo,'44',)
     var index = item.indexOf(removTodo);
-    console.log(index,'46')
+    // console.log(index,'46')
     if (index >= 0) {
       item.splice( index, 1 );
     }
@@ -40,10 +40,10 @@ export class AppComponent  {
   }
 
   private checkItemInprogress(item,i){
-    console.log(item,'60',i)
+    // console.log(item,'60',i)
     const removeInprogress = item[i];
     var index = item.indexOf(removeInprogress);
-    console.log(index,'46')
+    // console.log(index,'46')
     if (index >= 0) {
       item.splice( index, 1 );
     }
@@ -77,7 +77,7 @@ export class AppComponent  {
   }
 
  
-  private trackByFn(index: any, item: any) {
-   return index;
-  } 
+  // private trackByFn(index: any, item: any) {
+  //  return index;
+  // } 
 }
