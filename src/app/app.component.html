@@ -1,0 +1,89 @@
+<div class="list-container">
+<div>
+  <div class = "todo">
+  <h2 class="header-color">To do</h2>
+  </div>
+  <div class = "list list-add-todo">
+  <div class="list-item">
+    <input [(ngModel)] = "inputAdd" (keyup.enter)= "addTodo()" placeholder="Add To do" class="list-input">
+    <button (click) = "addTodo()"
+      mat-icon-button class ="button-add">
+        <mat-icon>add</mat-icon>
+      </button>
+  </div>
+  </div>
+   
+    <div  class="list-item"  *ngFor="let item of todo; let i = index;  trackBy: trackByFn"  >
+    <button (click) = "checkItemTodo(todo, i)"
+    mat-icon-button class = "button-close">
+      <mat-checkbox></mat-checkbox>
+    </button>
+      <input class = "list-input " [(ngModel)] = todo[i]/>
+
+    </div>
+
+ 
+</div>
+<div>
+    <div class="done">
+     <h2 class="header-color">In Progress </h2>
+      
+      <div class = "list list-add-todo">
+      <div class="list-item">
+        <input [(ngModel)] = "inputAddInprogress" (keyup.enter)= "addInprogress()" placeholder="Add To do" class="list-input">
+        <button (click) = "addInprogress()"
+          mat-icon-button class ="button-add">
+            <mat-icon>add</mat-icon>
+          </button>
+      </div>
+      </div>
+     
+    <div class="list-item" *ngFor="let item of inprogress; let i = index;  trackBy: trackByFn" >
+     
+    <button (click) = "checkItemInprogress(inprogress, i)"
+    mat-icon-button class = "button-close">
+      <mat-checkbox></mat-checkbox>
+    </button>
+     
+      <input   class = "list-input " [(ngModel)] = inprogress[i]/>
+     
+     </div>
+
+</div>
+<div>
+</div>
+
+</div>
+<div>
+<div class="done">
+ <h2 class="header-color">Completed </h2>
+
+  <div class = "list list-add-todo">
+  <div class="list-item">
+    <input [(ngModel)] = "inputAddCompleted" (keyup.enter)= "addCompleted()" placeholder="Add To do" class="list-input">
+    <button (click) = "addCompleted()"
+      mat-icon-button class ="button-add">
+        <mat-icon>add</mat-icon>
+      </button>
+  </div>
+  </div>
+
+<div class="list-item" *ngFor="let item of completed; let i = index;  trackBy: trackByFn" >
+<button 
+mat-icon-button class = "button-close">
+  <mat-checkbox></mat-checkbox>
+</button>
+  <input class = "list-input" [(ngModel)] = completed[i]/>
+  <button (click) = "deleteItem(completed, i)"
+   class = "button-close-text">
+  Delete
+    
+  </button>
+ </div>
+
+</div>
+<div>
+</div>
+
+</div>
+</div>

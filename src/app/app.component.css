@@ -1,0 +1,73 @@
+.list-container {
+  display: flex;
+  align-items: stretch;
+}
+
+.list {
+  min-width: 400px;
+  max-width: 400px;
+  max-height: 60vh;
+  overflow: auto;
+  border: solid 1px #ccc;
+  min-height: 45px;
+  background: white;
+  border-radius: 2px;
+  display: block;
+}
+
+.header-color {
+  color: #673ab7 !important;
+}
+
+.todo {
+  display: flex;
+  margin: 2px;
+}
+
+.done {
+  margin: 5px;
+}
+
+.list-input {
+  cursor: pointer;
+  padding: 16px 16px !important;
+  border: 0px;
+  width: 100%;
+}
+
+.list-item {
+  border-bottom: solid 1px rgb(156, 151, 151);
+  color: black;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 15px;
+  display: flex;
+}
+
+.list-add-todo {
+  margin-top: 5px;
+  border-color: #673ab7 !important;
+}
+
+.list-item:last-child {
+  border: none;
+}
+
+
+.button-add {
+  height: 50px;
+  width: 50px;
+}
+ .button-close-text {
+ width: 60px;
+    height: 30px;
+    margin: 5px;
+    color: red;
+    border: 2px solid red;
+} 
+
+
+
+
+
